@@ -1,0 +1,22 @@
+{
+  "name": "kriplytics",
+  "version": "1.0.0",
+  "description": "Kriplytics website",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js",
+    "cleanup-images": "node scripts/optimize-images.js --cleanup",
+    "optimize-clean": "node scripts/optimize-images.js --cleanup --optimize",
+    "create-placeholders": "node scripts/create-placeholders.js",
+    "dev": "npm run create-placeholders && npm run optimize-clean && npm start",
+    "start": "http-server . -p 3000 -c-1"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1",
+    "glob": "^10.2.6",
+    "yargs": "^17.7.2",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 
